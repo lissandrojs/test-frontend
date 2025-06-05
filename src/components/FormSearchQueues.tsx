@@ -62,7 +62,10 @@ const FormSearchQueueComponent = () => {
               className="w-full pl-10 pr-3 py-2 border text-gray-500 border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="https://api.exemplo.com/filas"
               value={url}
-              onChange={(e) => setUrl(e.target.value)}
+              onChange={(e) => {
+                const inputUrl = e.target.value.replace(/\/+$/, '');
+                setUrl(inputUrl);
+              }}
               required
             />
           </div>
