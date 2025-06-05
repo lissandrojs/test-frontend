@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Sistema de gerencimento de filas – Next.js
 
-First, run the development server:
+Este é um sistema de **gerenciamento de filas** desenvolvido com [Next.js](https://nextjs.org), ideal para controlar, visualizar e interagir com filas em tempo real. O projeto foi iniciado com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) e segue a estrutura recomendada da Vercel.
+
+## ⚙️ Configuração Inicial
+
+Antes de rodar o projeto, é necessário configurar as variáveis de ambiente:
+
+1. Duplique o arquivo `.env.example` e renomeie como `.env`.
+2. Preencha as variáveis conforme sua necessidade, como URLs de APIs, tokens de autenticação, etc.
+
+```bash
+cp .env.example .env
+```
+NEXT_PUBLIC_API_URL = url da api 
+
+
+## 🚀 Rodando o Projeto
+
+Para iniciar o servidor de desenvolvimento, execute:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# ou
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) no navegador para visualizar a aplicação.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Listagem de filas disponíveis
+* Conexão e desconexão de filas
+* Interface responsiva e moderna
+* Armazenamento temporário no `sessionStorage`/`localStorage` para controle de sessões
+* Exportação de arquivos csv e excel.
 
-## Learn More
+## 🖋️ Estrutura e Estilo
 
-To learn more about Next.js, take a look at the following resources:
+* Utiliza `Tailwind CSS` para estilização
+* Organização modular com componentes reutilizáveis
+* Utilização do `next/font` com a fonte [Geist](https://vercel.com/font)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A forma mais rápida de publicar o sistema é com a plataforma da Vercel:
 
-## Deploy on Vercel
+[Deploy com Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para mais opções, veja a [documentação oficial de deploy](https://nextjs.org/docs/app/building-your-application/deploying).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📚 Aprendizado
+
+* [Documentação do Next.js](https://nextjs.org/docs)
+* [Curso interativo de Next.js](https://nextjs.org/learn)
