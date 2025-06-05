@@ -2,18 +2,11 @@
 
 import { LogOut } from "lucide-react";
 import Image from "next/image"
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from "react";
+import { useRouter , usePathname} from 'next/navigation';
 
 const HeaderComponent = () =>{
     const router = useRouter()
-    const [storedData, setStoredData] = useState<string | null>('');
-
-    useEffect(() => {
-        const data = sessionStorage.getItem('queueResults');
-        console.log(data?.length)
-        setStoredData(data);
-    }, []);
+    const pathname = usePathname()
 
     const exitSession = async () => {
         router.push('/')
@@ -34,7 +27,7 @@ const HeaderComponent = () =>{
                     Sistema de Monitoramento de Filas
                 </h1>
             </div>
-            {storedData && storedData.length > 2 && 
+            {pathname === '/queue' && 
             <div>
                 <button
                     onClick={exitSession}

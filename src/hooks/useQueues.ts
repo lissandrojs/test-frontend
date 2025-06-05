@@ -19,12 +19,6 @@ export const useQueues = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('queueResults', JSON.stringify(queues));
-    }
-  }, [queues]);
-
   const manager = useMemo(() => new QueueManager(queues), [queues]);
 
   const filteredQueues = useMemo(() => {

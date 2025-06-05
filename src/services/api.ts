@@ -29,7 +29,7 @@ export const searchQueues = async (data: SearchExternalQueue): Promise<Queue[]> 
 
 export const  connectQueueRequest = async (id: number,data: Partial<Queue>): Promise<Queue> => {
     try {
-        const response = await api.put(`/queue/disconnected/${id}`,data)
+        const response = await api.patch(`/queue/disconnected/${id}`,data)
         return response.data
     } catch (error) {
         console.error('Erro na atualização de filas:', error);
